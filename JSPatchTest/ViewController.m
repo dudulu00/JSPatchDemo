@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor orangeColor];
+    
+    
+    
+    NSLog(@"这里是oc本地调用的log");
+   
 }
 
 - (void)didReceiveMemoryWarning {

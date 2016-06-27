@@ -15,6 +15,11 @@
 		B28591BD1D20CD5C00440D2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28591BB1D20CD5C00440D2C /* LaunchScreen.storyboard */; };
 		B28591C81D20CD5C00440D2C /* JSPatchTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28591C71D20CD5C00440D2C /* JSPatchTestTests.m */; };
 		B28591D31D20CD5C00440D2C /* JSPatchTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28591D21D20CD5C00440D2C /* JSPatchTestUITests.m */; };
+		B28591E11D20CDEA00440D2C /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28591E01D20CDEA00440D2C /* JSPatch.framework */; };
+		B28591E41D20CE5900440D2C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B28591E21D20CE4100440D2C /* libz.tbd */; };
+		B28591E61D20CE6600440D2C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28591E51D20CE6600440D2C /* JavaScriptCore.framework */; };
+		B28591E91D20D86000440D2C /* XRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28591E81D20D86000440D2C /* XRTableViewController.m */; };
+		B28591EC1D20F87E00440D2C /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = B28591EB1D20F87E00440D2C /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,12 @@
 		B28591CE1D20CD5C00440D2C /* JSPatchTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSPatchTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28591D21D20CD5C00440D2C /* JSPatchTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPatchTestUITests.m; sourceTree = "<group>"; };
 		B28591D41D20CD5C00440D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B28591E01D20CDEA00440D2C /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSPatch.framework; path = JSPatchTest/JSPatch.framework; sourceTree = "<group>"; };
+		B28591E21D20CE4100440D2C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B28591E51D20CE6600440D2C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B28591E71D20D86000440D2C /* XRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRTableViewController.h; sourceTree = "<group>"; };
+		B28591E81D20D86000440D2C /* XRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTableViewController.m; sourceTree = "<group>"; };
+		B28591EB1D20F87E00440D2C /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28591E41D20CE5900440D2C /* libz.tbd in Frameworks */,
+				B28591E61D20CE6600440D2C /* JavaScriptCore.framework in Frameworks */,
+				B28591E11D20CDEA00440D2C /* JSPatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +95,7 @@
 		B28591A11D20CD5C00440D2C = {
 			isa = PBXGroup;
 			children = (
+				B28591EA1D20EEE800440D2C /* Framework */,
 				B28591AC1D20CD5C00440D2C /* JSPatchTest */,
 				B28591C61D20CD5C00440D2C /* JSPatchTestTests */,
 				B28591D11D20CD5C00440D2C /* JSPatchTestUITests */,
@@ -105,11 +120,14 @@
 				B28591B11D20CD5C00440D2C /* AppDelegate.m */,
 				B28591B31D20CD5C00440D2C /* ViewController.h */,
 				B28591B41D20CD5C00440D2C /* ViewController.m */,
+				B28591E71D20D86000440D2C /* XRTableViewController.h */,
+				B28591E81D20D86000440D2C /* XRTableViewController.m */,
 				B28591B61D20CD5C00440D2C /* Main.storyboard */,
 				B28591B91D20CD5C00440D2C /* Assets.xcassets */,
 				B28591BB1D20CD5C00440D2C /* LaunchScreen.storyboard */,
 				B28591BE1D20CD5C00440D2C /* Info.plist */,
 				B28591AD1D20CD5C00440D2C /* Supporting Files */,
+				B28591EB1D20F87E00440D2C /* main.js */,
 			);
 			path = JSPatchTest;
 			sourceTree = "<group>";
@@ -138,6 +156,16 @@
 				B28591D41D20CD5C00440D2C /* Info.plist */,
 			);
 			path = JSPatchTestUITests;
+			sourceTree = "<group>";
+		};
+		B28591EA1D20EEE800440D2C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				B28591E51D20CE6600440D2C /* JavaScriptCore.framework */,
+				B28591E21D20CE4100440D2C /* libz.tbd */,
+				B28591E01D20CDEA00440D2C /* JSPatch.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +274,7 @@
 				B28591BD1D20CD5C00440D2C /* LaunchScreen.storyboard in Resources */,
 				B28591BA1D20CD5C00440D2C /* Assets.xcassets in Resources */,
 				B28591B81D20CD5C00440D2C /* Main.storyboard in Resources */,
+				B28591EC1D20F87E00440D2C /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +302,7 @@
 				B28591B51D20CD5C00440D2C /* ViewController.m in Sources */,
 				B28591B21D20CD5C00440D2C /* AppDelegate.m in Sources */,
 				B28591AF1D20CD5C00440D2C /* main.m in Sources */,
+				B28591E91D20D86000440D2C /* XRTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +445,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPatchTest",
+				);
 				INFOPLIST_FILE = JSPatchTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.njm.JSPatchTest;
@@ -426,6 +460,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JSPatchTest",
+				);
 				INFOPLIST_FILE = JSPatchTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.njm.JSPatchTest;
