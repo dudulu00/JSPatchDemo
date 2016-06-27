@@ -10,7 +10,7 @@
 #import <JSPatch/JSPatch.h>
 #import "ViewController.h"
 
-const static NSString *jsAppKey = @"you-appkey";
+const static NSString *jsAppKey = @"";
 
 
 @interface AppDelegate ()
@@ -22,9 +22,8 @@ const static NSString *jsAppKey = @"you-appkey";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    //    [self initJSPatch];
-    [JSPatch testScriptInBundle];
-    
+    [self initJSPatch];
+    //    [JSPatch testScriptInBundle];
     
     [self initVC];
     return YES;
@@ -38,16 +37,23 @@ const static NSString *jsAppKey = @"you-appkey";
     
     [JSPatch setupLogger:^(NSString *msg) {
         //msg 是 JSPatch log 字符串，用你自定义的logger打出
-        NSLog(@"%@", msg);
+        NSLog(@"jspatchlog:%@", msg);
     }];
     [JSPatch startWithAppKey:jsAppKey];
     //获取在线参数
     [JSPatch updateConfigWithAppKey:jsAppKey];
-    [JSPatch setupConfigInterval:30000];
+    [JSPatch setupConfigInterval:30];
+    //条件下发 和 灰度下发
+    [JSPatch setupUserData:@{
+                             @"userId":_userId,
+                             @"location":_loc,
+                             @"sex":_sexual
+                             }];
     [JSPatch setupUpdatedConfigCallback:^(NSDictionary *configs, NSError *error) {
         NSLog(@"====config-callback:%@ %@", configs, error);
     }];
-    NSDictionary *params = [JSPatch getConfigParams];
+#warning 这里为什么拿不到在线参数？？？
+    NSMutableDictionary *params = [[JSPatch getConfigParams] mutableCopy];
     NSLog(@"====parmas:%@",params);
     /*
      自定义RSA密钥
@@ -61,12 +67,7 @@ const static NSString *jsAppKey = @"you-appkey";
      */
     //    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApgeqKYKPVFk1dk2JGrKv\n.......----END PUBLIC KEY-----"];
     //    +setupDevelopment
-    //条件下发 和 灰度下发
-    [JSPatch setupUserData:@{
-                             @"userId":_userId,
-                             @"location":_loc,
-                             @"sex":_sexual
-                             }];
+    
     //开始同步脚本
     [JSPatch sync];
     
@@ -90,7 +91,7 @@ const static NSString *jsAppKey = @"you-appkey";
                 break;
             }
             case JPCallbackTypeRunScript: {
-                NSLog(@"run script %@ %@", data, error);
+                NSLog(@"run script:\n %@ \n===\nerror:%@", data, error);
                 break;
             }
             default:

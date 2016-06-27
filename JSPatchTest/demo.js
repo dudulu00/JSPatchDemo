@@ -11,18 +11,17 @@
 //            })
 
 // 调用require引入要使用的OC类
-require('UIView, UIColor',')
-        
-        defineClass("ViewController", {
-                    viewDidLoad: function(){
-                    
-                    self.view().setBackgroundColor(UIColor.greenColor());
-                    console.log('这里是js脚本调用');
-                    
-                    
-                    }
-                    
-                    })
-        
-        
-        
+require('UIView, UIColor')
+
+defineClass("ViewController", {
+            viewDidLoad: function(){
+            
+            self.view().setBackgroundColor(UIColor.greenColor());
+            console.log('这里是js脚本调用');
+            
+            
+            }
+            
+            })
+
+

@@ -19,7 +19,7 @@
 		B28591E41D20CE5900440D2C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B28591E21D20CE4100440D2C /* libz.tbd */; };
 		B28591E61D20CE6600440D2C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28591E51D20CE6600440D2C /* JavaScriptCore.framework */; };
 		B28591E91D20D86000440D2C /* XRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28591E81D20D86000440D2C /* XRTableViewController.m */; };
-		B28591EC1D20F87E00440D2C /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = B28591EB1D20F87E00440D2C /* main.js */; };
+		B28591EC1D20F87E00440D2C /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = B28591EB1D20F87E00440D2C /* demo.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		B28591E51D20CE6600440D2C /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		B28591E71D20D86000440D2C /* XRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRTableViewController.h; sourceTree = "<group>"; };
 		B28591E81D20D86000440D2C /* XRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTableViewController.m; sourceTree = "<group>"; };
-		B28591EB1D20F87E00440D2C /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		B28591EB1D20F87E00440D2C /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				B28591BB1D20CD5C00440D2C /* LaunchScreen.storyboard */,
 				B28591BE1D20CD5C00440D2C /* Info.plist */,
 				B28591AD1D20CD5C00440D2C /* Supporting Files */,
-				B28591EB1D20F87E00440D2C /* main.js */,
+				B28591EB1D20F87E00440D2C /* demo.js */,
 			);
 			path = JSPatchTest;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 				B28591BD1D20CD5C00440D2C /* LaunchScreen.storyboard in Resources */,
 				B28591BA1D20CD5C00440D2C /* Assets.xcassets in Resources */,
 				B28591B81D20CD5C00440D2C /* Main.storyboard in Resources */,
-				B28591EC1D20F87E00440D2C /* main.js in Resources */,
+				B28591EC1D20F87E00440D2C /* demo.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
